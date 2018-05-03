@@ -3,7 +3,7 @@
   const url = require('url')
   const {shell} = require('electron')
   const os = require('os')
-  console.log(url);
+
   // Enable live reload for Electron
   require("electron-reload")(__dirname, {
     app: require(`${__dirname}/node_modules/electron`)
