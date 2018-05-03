@@ -2,19 +2,19 @@
   <html>
     <head>
       <meta charset="UTF-8">
-      <title>Hello World!</title>
+      <title>Poulpy</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
       <link rel="stylesheet" href="styles/reset.css">
       <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-      <a href="pages/cours.html">lnik test</a>
+      <a href="pages/cours.html">link test</a>
     <!-- SECTION LOADER -->
       <section class="loader">
         <div class="top-loader">
           <a href="#" id="enseigner">J'enseigne</a>
-          <img src="img/poulpe-top.png" alt="poule-top">
+          <img src="img/poulpe-top.png" alt="poulpe-top">
         </div>
 
         <div class="bot-loader">
@@ -24,13 +24,13 @@
               <path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M 0 43.2887C 115.494 10.622 417.38 -35.1113 700.974 43.2887C 984.567 121.689 1311.82 75.9554 1440 43.2887L 1440 196.43L 1440 229.289L 1440 543L 0 543L 0 229.289L 0 196.43L 0 43.2887Z"
                 fill="#8ED4E2" />
             </g>
-          <img src="img/poulpe-bot.png" alt="poule-bot">
+          <img src="img/poulpe-bot.png" alt="poulpe-bot">
           <a href="#" id="former">Je me forme</a>
         </div>
       </section>
-
     <!-- HOMEPAGE -->
       <section class="homepage">
+        <a href="pages/cours.html">link</a>
         <header>
           <img class="logo" src="img/poulpe-bot.png" alt="Logo">
           <h2 class="title">Poulpy</h2>
@@ -44,7 +44,8 @@
         </header>
 
         <div class="connected">
-
+          <p></p>
+          <span></span>
         </div>
 
         <div class="breadcrumb">
@@ -75,6 +76,28 @@
 
       <script>
         require('./js/home.js');
+      </script>
+      
+      <script>
+        var alertOnlineStatus = function () {
+          const connected = document.querySelector('.connected p');
+          const span = document.querySelector('.connected span');
+          const div = document.querySelector('.connected');
+
+          if (navigator.onLine) {
+            connected.innerText = 'Connecté';
+            span.style.backgroundColor = '#219653';
+            div.style.width = 100 + 'px';
+          }else {
+            connected.innerText = 'Hors connexion';
+            span.style.backgroundColor = '#868686';
+          }
+        };
+
+        window.addEventListener('online', alertOnlineStatus);
+        window.addEventListener('offline', alertOnlineStatus);
+
+        alertOnlineStatus();
       </script>
     </body>
   </html>
