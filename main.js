@@ -1,6 +1,8 @@
-const {app, BrowserWindow} = require('electron')
+  const {app, BrowserWindow} = require('electron')
   const path = require('path')
   const url = require('url')
+  const {shell} = require('electron')
+  const os = require('os')
 
   // Enable live reload for Electron
   require("electron-reload")(__dirname, {
@@ -18,6 +20,7 @@ const {app, BrowserWindow} = require('electron')
       height: 1023,
       frame: true
     });
+
 
     // and load the index.html of the app.
     win.loadURL(url.format({
@@ -37,16 +40,6 @@ const {app, BrowserWindow} = require('electron')
       win = null
     })
   }
-  // const newWindowBtn = document.getElementById('frameless-window');
-  //
-  // newWindowBtn.addEventListener('click', (event) => {
-  //   const modalPath = path.join('file://', __dirname, 'index.html')
-  //   let win = new BrowserWindow({ frame: false })
-  //
-  //   win.on('close', () => { win = null })
-  //   win.loadURL(modalPath)
-  //   win.show()
-  // })
 
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
@@ -61,6 +54,9 @@ const {app, BrowserWindow} = require('electron')
       app.quit()
     }
   })
+
+
+
 
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
