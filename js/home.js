@@ -46,7 +46,7 @@ flag.addEventListener('click', function () {
     flag.classList.add('fr')
   } else {
     flag.src = "img/mg.png";
-    
+
     flag.classList.remove("fr");
     flag.classList.add("mg");
   }
