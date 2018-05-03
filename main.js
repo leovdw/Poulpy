@@ -8,7 +8,7 @@ const {app, BrowserWindow} = require('electron')
 
   function createWindow () {
     // Create the browser window.
-    win = new BrowserWindow({width: 1200, height: 800})
+    win = new BrowserWindow({ frame: false })
 
     // and load the index.html of the app.
     win.loadURL(url.format({
@@ -20,7 +20,7 @@ const {app, BrowserWindow} = require('electron')
     // Open the DevTools.
     win.webContents.openDevTools()
 
-    // Emitted when the window is closed.
+      // Emitted when the window is closed.
     win.on('closed', () => {
       // Dereference the window object, usually you would store windows
       // in an array if your app supports multi windows, this is the time
@@ -28,6 +28,16 @@ const {app, BrowserWindow} = require('electron')
       win = null
     })
   }
+  // const newWindowBtn = document.getElementById('frameless-window');
+  //
+  // newWindowBtn.addEventListener('click', (event) => {
+  //   const modalPath = path.join('file://', __dirname, 'index.html')
+  //   let win = new BrowserWindow({ frame: false })
+  //
+  //   win.on('close', () => { win = null })
+  //   win.loadURL(modalPath)
+  //   win.show()
+  // })
 
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
