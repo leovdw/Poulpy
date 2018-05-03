@@ -22,3 +22,6 @@
       droped[i].classList.toggle('is_hidden')
     })
   }
+  if (navigator.onLine === true) {
+
+  }
