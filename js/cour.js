@@ -1,9 +1,7 @@
   const lecons = document.querySelectorAll('.lecons-dropdown h3');
 
   for (var i = 0; i < lecons.length; i++) {
-
     lecons[i].getAttribute("data-offline")
-
     if (lecons[i].getAttribute("data-offline") === "0") {
         lecons[i].classList.add('online')
     } else if (lecons[i].getAttribute("data-offline") === "1") {
@@ -13,7 +11,6 @@
 
   const dropers = document.querySelectorAll('.droper');
   const droped =  document.querySelectorAll('.lecons-dropdown');
-  console.log(droped);
 
   for (let i = 0; i < dropers.length; i++) {
     dropers[i].addEventListener('click', function() {
@@ -22,9 +19,16 @@
       droped[i].classList.toggle('is_hidden')
     })
   }
+
   if (navigator.onLine === true) {
-    const content_offline = document.querySelectorAll('.online');
+    const content_offline = document.querySelectorAll('.online a');
+    console.log(content_offline);
     for (var i = 0; i < content_offline.length; i++) {
-      content_offline[i].style.cursor = "not-allowed !important"
+      content_offline[i].addEventListener('click', (event) => {
+        event.preventDefault();
+      })
     }
+
+    var header = document.querySelector('header');
+    header.innerHTML = "<style> .online{cursor: not-allowed !important;} .online a{cursor: not-allowed !important;} </style>"
   }

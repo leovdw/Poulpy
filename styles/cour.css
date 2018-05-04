@@ -7,7 +7,7 @@
   position: relative;
   padding: 45px 25px 35px 25px;
   font-family: Roboto;
-  max-height: 85vh;
+  max-height: 59vh;
   overflow: hidden;
   overflow-y: visible;
 }
@@ -36,9 +36,7 @@
 .offline{
   position: relative;
 }
-.online{
-  /* cursor: not-allowed !important; */
-}
+
 .online::after{
   position: absolute;
   content: '';
