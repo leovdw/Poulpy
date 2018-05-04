@@ -23,5 +23,8 @@
     })
   }
   if (navigator.onLine === true) {
-
+    const content_offline = document.querySelectorAll('.online');
+    for (var i = 0; i < content_offline.length; i++) {
+      content_offline[i].style.cursor = "not-allowed !important"
+    }
   }

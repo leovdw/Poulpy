@@ -36,7 +36,7 @@
   position: relative;
 }
 .online{
-  cursor: not-allowed !important;
+  /* cursor: not-allowed !important; */
 }
 .online::after{
   position: absolute;
