@@ -16,8 +16,8 @@
   function createWindow () {
 
     win = new BrowserWindow({
-      width: 1600,
-      height: 1023,
+      width: 2500,
+      height: 1623,
       frame: true
     });
 
@@ -32,7 +32,6 @@
     win.webContents.openDevTools()
 
     win.on('closed', () => {
-
       win = null
     })
   }
@@ -55,10 +54,12 @@
     const pdfPath = path.join(os.tmpdir(), 'print.pdf');
     const win = BrowserWindow.fromWebContents(event.sender);
 
+
     win.webContents.printToPDF({}, (error, data) => {
       if (error) return console.log(error.message);
-
+      console.log(data);
       fs.writeFile(pdfPath, data, (error) => {
+
         if (error) console.log(error.message);
         shell.openExternal(`file://${pdfPath}`)
         event.sender.send('wrote-pdf', pdfPath)

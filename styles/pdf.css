@@ -1,0 +1,51 @@
+@media print {
+  body {
+    background: none;
+    color: black !important;
+    font-size: 70%;
+    margin: 0; padding: 0;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+  a{
+    display: none;
+  }
+  #progressbar{
+    display: none;
+  }
+  .bullet{
+    display: none
+  }
+  .buttons-wraper{
+    display: none;
+  }
+  .lecon-container h1{
+    margin-top: 0;
+  }
+  .connected{
+    display: none;
+  }
+  .mg{
+    display: none;
+  }
+  .nav, button, .demo-box:before,
+  #pdf-path, header p {
+    display: none;
+  }
+
+  .demo-box, h2,
+  pre, code {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  header {
+    padding: 0 0 10px 0;
+  }
+
+  code, .support {
+    font-size: 10px;
+  }
+}
