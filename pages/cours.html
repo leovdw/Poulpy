@@ -2,14 +2,47 @@
   <html>
     <head>
       <meta charset="UTF-8">
-      <title>Hello World!</title>
+      <title>Poulpy</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link rel="stylesheet" href="../styles/reset.css">
-      <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/header.css">
       <link rel="stylesheet" href="../styles/cour.css">
     </head>
     <body>
       <a href="../index.html">Home</a>
+        <header>
+          <img class="logo" src="../img/poulpe-bot.png" alt="Logo">
+          <h2 class="title">Poulpy</h2>
+          <div class="left-link is-active">
+            <span>Je me forme</span>
+          </div>
+          <div class="right-link is-inactive">
+            <span>J'enseigne</span>
+            <img src="../img/mg.png" class="mg" alt="Langues">
+          </div>
+        </header>
+        
+        <div class="connected">
+          <p></p>
+          <span></span>
+        </div>
+        
+        <div class="breadcrumb">
+          <div id="progressbar" class="progressBar" data-step="3"></div>
+          <div class="bullet">
+            <a href="../index.html">J'enseigne</a>
+          </div>
+          <div class="bullet">
+            <a href="../index.html">Mes matières</a>
+          </div>
+          <div class="bullet">
+            <a href="pages/cours.html">Mes cours</a>
+          </div>
+          <div class="bullet">
+            <a href="#">Mon cours</a>
+          </div>
+        </div>
+
       <h1 class="cat">Maths</h1>
       <div class="lecon-wraper">
         <div class="lecon-container">
@@ -65,6 +98,28 @@
     <script>
       require('../js/home.js');
       require('../js/cour.js');
+    </script>
+
+    <script>
+      var alertOnlineStatus = function () {
+        const connected = document.querySelector('.connected p');
+        const span = document.querySelector('.connected span');
+        const div = document.querySelector('.connected');
+
+        if (navigator.onLine) {
+          connected.innerText = 'Connecté';
+          span.style.backgroundColor = '#219653';
+          div.style.width = 100 + 'px';
+        } else {
+          connected.innerText = 'Hors connexion';
+          span.style.backgroundColor = '#868686';
+        }
+      };
+
+      window.addEventListener('online', alertOnlineStatus);
+      window.addEventListener('offline', alertOnlineStatus);
+
+      alertOnlineStatus();
     </script>
     </body>
   </html>
