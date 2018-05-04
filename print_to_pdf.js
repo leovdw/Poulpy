@@ -9,7 +9,7 @@ printPDFBtn.addEventListener('click', (event) => {
 
 ipc.on('wrote-pdf', (event, path) => {
   const message = `Wrote PDF to: ${path}`
-  document.getElementById('pdf-path').innerHTML = "Fichier sauvegardé !"
+  document.getElementById('pdf-path').innerHTML = message
 })
 
 const app = require('electron').remote
