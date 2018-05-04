@@ -23,7 +23,7 @@ document.getElementById('print-pdf').onclick = () => {
       return
     }
 
-    var content = document.querySelector('.print-section').innerHTML;
+    var content = document.querySelector('.print-section').innerText;
 
     fs.writeFile(fileName, content, (err) => {
       if (err) {

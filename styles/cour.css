@@ -7,9 +7,6 @@
   position: relative;
   padding: 45px 25px 35px 25px;
   font-family: Roboto;
-  max-height: 59vh;
-  overflow: hidden;
-  overflow-y: visible;
 }
 .lecon-wraper::before{
   position: absolute;
