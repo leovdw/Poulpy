@@ -22,7 +22,7 @@
 
   if (navigator.onLine === true) {
     const content_offline = document.querySelectorAll('.online a');
-    console.log(content_offline);
+
     for (var i = 0; i < content_offline.length; i++) {
       content_offline[i].addEventListener('click', (event) => {
         event.preventDefault();
