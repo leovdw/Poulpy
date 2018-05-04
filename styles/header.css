@@ -50,6 +50,7 @@ header {
   left: calc(100vw - 58vw);
   font-family: 'Roboto', sans-serif;
   color: #2E95A7;
+  text-transform: none;
   top: 100px;
   font-weight: bold;
   font-size: 64px;

@@ -21,6 +21,11 @@
   left: 0;
   /* transform: translateY(-100%); */
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
 .cat{
   width: 90%;
   margin: 0 auto;

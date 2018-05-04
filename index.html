@@ -30,16 +30,16 @@
       </section>
     <!-- HOMEPAGE -->
       <section class="homepage">
-        <a href="pages/cours.html">link</a>
-
         <header>
           <img class="logo" src="img/poulpe-bot.png" alt="Logo">
           <h2 class="title">Poulpy</h2>
           <div class="left-link is-active">
-            <span>Je me forme</span>
+            <span><a href="index.html">Je me forme</a></span>
           </div>
           <div class="right-link is-inactive">
-            <span>J'enseigne</span>
+            <span>
+              <a href="index.html">J'enseigne</a>
+            </span>
             <img src="img/mg.png" class="mg" alt="Langues">
           </div>
         </header>
@@ -89,9 +89,15 @@
             connected.innerText = 'Connecté';
             span.style.backgroundColor = '#219653';
             div.style.width = 100 + 'px';
+
           }else {
             connected.innerText = 'Hors connexion';
             span.style.backgroundColor = '#868686';
+
+            new window.Notification(
+              "Vous avez été déconnecté",
+              { onShow: true }
+            );
           }
         };
 

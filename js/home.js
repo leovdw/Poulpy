@@ -62,20 +62,13 @@ function tabs (value) {
   const rightLink = document.querySelector(".right-link");
   const step = document.getElementById("progressbar");
 
-
   if (value) {
     if (value === "enseigner") {
       rightLink.classList.add("is-active");
       leftLink.classList.add("is-inactive");
-
-      step.dataset.step = 2;
-      breadcrumb();
     } else {
       leftLink.classList.add("is-active");
       rightLink.classList.add("is-inactive");
-
-      step.dataset.step = 1;
-      breadcrumb();
     }
   }
 
@@ -88,6 +81,7 @@ function tabs (value) {
 
       leftLink.classList.add("is-active");
       rightLink.classList.add("is-inactive");
+
       step.dataset.step = 1;
       breadcrumb();
 
@@ -102,6 +96,7 @@ function tabs (value) {
 
       leftLink.classList.add("is-inactive");
       rightLink.classList.add("is-active");
+
       step.dataset.step = 2;
       breadcrumb();
 
