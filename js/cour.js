@@ -20,7 +20,7 @@
     })
   }
 
-  if (navigator.onLine === true) {
+  if (navigator.onLine === false) {
     const content_offline = document.querySelectorAll('.online a');
 
     for (var i = 0; i < content_offline.length; i++) {
