@@ -6,6 +6,11 @@ body {
   overflow-y: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /** LOADER **/
 .loader {
   height: 100vh;
